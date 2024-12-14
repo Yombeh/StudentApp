@@ -9,10 +9,13 @@ public class Student {
     @Id
     @GeneratedValue
     private Long id;
+
     private String userName;
-    private int matNumber;
-    private int Course;
+    private String matNumber;
+    private String Course;
     private int grade;
+    private int classDuration;
+
 
     public long getId() {
         return id;
@@ -30,20 +33,20 @@ public class Student {
         this.userName = userName;
     }
 
-    public int getMatNumber() {
+    public String getMatNumber() {
         return matNumber;
     }
 
-    public void setMatNumber(int matNumber) {
+    public void setMatNumber(String matNumber) {
         this.matNumber = matNumber;
     }
 
-    public int getCourse() {
+    public String getCourse() {
         return Course;
     }
 
-    public void setCourse(int classDuration) {
-        this.Course = classDuration;
+    public void setCourse(String Course) {
+        this.Course = Course;
     }
 
     public int getGrade() {
@@ -53,5 +56,13 @@ public class Student {
     public void setGrade(int grade) {
         this.grade = grade;
     }
+    public int getClassDuration() {
+        return classDuration;
+    }
+
+    public void setClassDuration(int classDuration) {
+        this.classDuration = classDuration;
+    }
+
 
 }

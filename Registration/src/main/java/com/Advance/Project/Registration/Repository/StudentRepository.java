@@ -1,4 +1,4 @@
-package Repository;
+package com.Advance.Project.Registration.Repository;
 
 import com.Advance.Project.Registration.model.Student;
 import org.springframework.data.jpa.repository.JpaRepository;
