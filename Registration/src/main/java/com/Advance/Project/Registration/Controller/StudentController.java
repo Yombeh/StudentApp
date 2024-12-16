@@ -56,7 +56,13 @@ public class StudentController {
          studentRepository.deleteById(id);
         return  " Student with id " + id +" has been deleted sucessfully.";
         }
-
-
+@DeleteMapping("/deleteStudent/{id}")
+    String  deleteStudent(@PathVariable Long id){
+        if(!studentRepository.existsById(id)) {
+                      throw  new StudentNotFoundException(id);
+        }
+        studentRepository.deleteById(id);
+        return "Sucessfully delteted student with ID: "+id ;
+  }
 
 }
